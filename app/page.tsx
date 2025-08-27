@@ -1,23 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
     <div className="font-sans min-h-screen">
-      <header className="border-b border-black/[.08] dark:border-white/[.12]">
-        <div className="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-lg bg-black/[.08] dark:bg-white/[.12]" />
-            <span className="text-xl font-semibold tracking-tight">RecipeShare</span>
-          </div>
-          <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <a className="hover:underline underline-offset-4" href="#discover">Discover</a>
-            <a className="hover:underline underline-offset-4" href="#categories">Categories</a>
-            <a className="hover:underline underline-offset-4" href="#how">How it works</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <button className="h-9 px-3 rounded-md border border-black/[.08] dark:border-white/[.12] text-sm">Log in</button>
-            <button className="h-9 px-3 rounded-md bg-foreground text-background text-sm">Sign up</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>
         <section className="mx-auto max-w-6xl px-6 pt-14 pb-12">
@@ -28,29 +14,9 @@ export default function Home() {
               Save your favorites, leave likes and comments, and follow your favorite cooks.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <button className="h-11 px-5 rounded-md bg-foreground text-background text-sm font-medium">Create a recipe</button>
-              <button className="h-11 px-5 rounded-md border border-black/[.08] dark:border-white/[.12] text-sm font-medium">Browse recipes</button>
+              <a href="/auth/signup" className="h-11 px-5 rounded-md bg-foreground text-background text-sm font-medium flex items-center justify-center cursor-pointer">Start creating</a>
+              <a href="/auth/login" className="h-11 px-5 rounded-md border border-black/[.08] dark:border-white/[.12] text-sm font-medium flex items-center justify-center cursor-pointer">Log in</a>
             </div>
-          </div>
-        </section>
-
-        <section id="discover" className="mx-auto max-w-6xl px-6 pb-16">
-          <h2 className="text-xl font-semibold mb-4">Trending recipes</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1,2,3,4,5,6].map((i) => (
-              <div key={i} className="rounded-xl border border-black/[.08] dark:border-white/[.12] overflow-hidden">
-                <div className="aspect-video bg-black/[.08] dark:bg-white/[.12]" />
-                <div className="p-4">
-                  <div className="text-sm text-black/60 dark:text-white/60">@chef{i}</div>
-                  <div className="mt-1 font-medium">Sample Recipe Title {i}</div>
-                  <div className="mt-3 flex items-center gap-4 text-sm text-black/60 dark:text-white/60">
-                    <span>❤ 24</span>
-                    <span>🔖 10</span>
-                    <span>⭐ 4.8</span>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -72,7 +38,7 @@ export default function Home() {
               <div className="mt-2 font-medium">Engage</div>
               <p className="mt-1 text-sm text-black/70 dark:text-white/70">Like, save, rate, and comment.</p>
             </div>
-          </div>
+        </div>
         </section>
       </main>
 

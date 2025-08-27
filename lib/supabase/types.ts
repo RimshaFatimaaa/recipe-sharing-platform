@@ -20,6 +20,7 @@ export interface Database {
           created_at: string | null; // timestamptz
           updated_at: string | null; // timestamptz
           email: string | null;
+          password: string | null;
         };
         Insert: {
           id: string; // must match auth.users.id
@@ -28,6 +29,7 @@ export interface Database {
           created_at?: string | null;
           updated_at?: string | null;
           email?: string | null;
+          password?: string | null;
         };
         Update: Partial<Database["public"]["Tables"]["profiles"]["Insert"]>;
       };
