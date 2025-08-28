@@ -6,16 +6,19 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="mx-auto max-w-6xl px-6 pt-14 pb-12">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Share and discover recipes you love</h1>
-            <p className="mt-4 text-balance text-black/70 dark:text-white/70 leading-7">
-              Create beautiful recipe posts with images, ingredients, and step-by-step instructions.
-              Save your favorites, leave likes and comments, and follow your favorite cooks.
+        <section className="px-6 pt-24 pb-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+              Share Your Culinary
+              <br />
+              Masterpieces
+            </h1>
+            <p className="mt-4 text-black/70 dark:text-white/70 leading-7">
+              Join our community of food lovers. Share recipes, discover new dishes, and
+              connect with fellow cooking enthusiasts.
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="/auth/signup" className="h-11 px-5 rounded-md bg-foreground text-background text-sm font-medium flex items-center justify-center cursor-pointer">Start creating</a>
-              <a href="/auth/login" className="h-11 px-5 rounded-md border border-black/[.08] dark:border-white/[.12] text-sm font-medium flex items-center justify-center cursor-pointer">Log in</a>
+            <div className="mt-8 flex items-center justify-center">
+              <a href="/auth/signup" className="h-10 px-5 rounded-md bg-foreground text-background text-sm font-medium inline-flex items-center justify-center cursor-pointer">Start Sharing</a>
             </div>
           </div>
         </section>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { ensureProfileForCurrentUser } from "@/lib/supabase/profile";
 
 type Mode = "signin" | "signup";
 
@@ -28,6 +29,8 @@ export default function PasswordAuthSingleModeForm({ mode }: { mode: Mode }) {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
+        // Ensure profile exists once the session is set
+        await fetch("/auth/callback?code=noop", { method: "GET" }).catch(() => {});
         setStatus("done");
         setMessage("Signed in. Redirecting…");
         setTimeout(() => window.location.assign("/dashboard"), 400);
