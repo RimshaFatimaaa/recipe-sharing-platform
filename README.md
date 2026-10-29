@@ -21,9 +21,8 @@ The Recipe Sharing Platform is a web development project built to provide a dedi
 
 The technologies used in this project should be listed according to the actual implementation.
 
-- **Frontend:** Add your frontend technologies.
-- **Backend:** Add your backend framework, if applicable.
-- **Database:** Add your database, if applicable.
+- **Frontend:** Next.js 15  |  TypeScript  |  React 19  | Tailwind CSS.
+- **Database:** SQL  | Supabase.
 - **Development Tools:** Git and GitHub.
 
 ## Getting Started
